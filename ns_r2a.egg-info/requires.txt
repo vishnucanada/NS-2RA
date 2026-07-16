@@ -1,0 +1,9 @@
+pydantic>=2.7
+ollama>=0.4
+networkx>=3.2
+z3-solver>=4.13
+typer>=0.12
+rich>=13.7
+
+[dev]
+pytest>=8.0

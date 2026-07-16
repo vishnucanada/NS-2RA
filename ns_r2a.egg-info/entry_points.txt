@@ -1,0 +1,2 @@
+[console_scripts]
+ns-r2a = ns_r2a.cli:app

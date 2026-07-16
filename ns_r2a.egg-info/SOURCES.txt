@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+ns_r2a.egg-info/PKG-INFO
+ns_r2a.egg-info/SOURCES.txt
+ns_r2a.egg-info/dependency_links.txt
+ns_r2a.egg-info/entry_points.txt
+ns_r2a.egg-info/requires.txt
+ns_r2a.egg-info/top_level.txt

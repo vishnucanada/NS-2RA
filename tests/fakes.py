@@ -123,9 +123,11 @@ def with_hallucinated_edge(model: ArchitectureModel) -> ArchitectureModel:
 
 
 def with_layering_violation(model: ArchitectureModel) -> ArchitectureModel:
+    # notifier (application) -> storefront (presentation) points upward but
+    # closes no cycle, so it violates exactly one rule.
     broken = model.model_copy(deep=True)
     broken.connectors.append(
-        Connector(source="event_queue", target="notifier", interface="", protocol="AMQP")
+        Connector(source="notifier", target="storefront", interface="", protocol="HTTP")
     )
     return broken
 

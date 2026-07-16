@@ -32,7 +32,7 @@ def test_repair_fixes_model_in_one_round():
     assert result.rounds[0].violations[0].rule == "layering"
     # The repair prompt must carry the counterexample to the model.
     _, prompt = backend.calls[0]
-    assert "layering" in prompt and "event_queue" in prompt
+    assert "layering" in prompt and "notifier" in prompt
 
 
 def test_budget_exhaustion_reports_unverified():

@@ -22,8 +22,8 @@ def test_layering_violation_with_counterexample():
     result = verify(with_layering_violation(make_valid_model()), make_requirements())
     assert rules(result) == {"layering"}
     (v,) = result.violations
-    assert "event_queue" in v.elements and "notifier" in v.elements
-    assert "layer(event_queue)=3" in v.counterexample
+    assert "notifier" in v.elements and "storefront" in v.elements
+    assert "layer(notifier)=1" in v.counterexample
 
 
 def test_cycle_detected_via_unsat_core():
